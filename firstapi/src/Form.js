@@ -27,6 +27,12 @@ const Form = props => {
   };
 
 
+
+  
+console.log('form id', props.id)
+
+
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -45,6 +51,8 @@ const Form = props => {
       />
       <button type="submit">Submit</button>
     </form>
+
+
   );
 };
 

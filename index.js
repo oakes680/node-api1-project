@@ -72,7 +72,7 @@ server.post("/api/users", (req, res) => {
           } else {
             console.log('this is fromi post',users)
             console.log('this is userinfo', userInfo)
-        res.status(201).json(users);
+        res.status(201).json(userInfo);
       }})
       .catch(err => {
         console.log(err);
@@ -111,7 +111,7 @@ server.put("/api/users/:id", (req, res) => {
   const userInfo = req.body;
 
   if (!userInfo.name || !userInfo.bio ) {
-    res.status(400).json({  errorMessage: "this user does not exist    Please provide name and bio for the user." })
+    res.status(400).json({  errorMessage: "   Please provide name and bio for the user." })
   } else {
 
   Database.update(id, userInfo)
